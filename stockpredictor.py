@@ -66,7 +66,7 @@ def load_ls(lf='log.txt', ic=50, mts=100, ad=None):
     except Exception as e:
         print(f"Error loading log: {e}. Starting fresh.")
         return {'sdi': mts, 'pv': ic, 'acc': 0.0, 'ra': [], 'rp': []}
-
+# change stock ticker here!! ex: AAPL, GOOG, AMD, TYTA, AMZN, etc
 t_sym = 'NVDA'
 ic_start = 50
 mts = 100
@@ -204,4 +204,5 @@ while True:
     if cs_idx >= len(all_d_daily) - 1 and cd_sim < today:
         print(f"End of historical data: {cd_sim.strftime('%Y-%m-%d')}. Fetching live.")
         cs_idx = len(all_d_daily) - 1
+
 
